@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Md Saquib | Portfolio</title>
+
+  <!-- ============================
+       Internal CSS (All styles)
+       ============================ -->
+  <style>
+    /* Reset */
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(120deg,#f0f4ff,#e6f0fa);
+      color:#222;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    a { color:inherit; text-decoration:none; }
+
+    /* Container */
+    .container { width:90%; max-width:1100px; margin:0 auto; }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg,#007bff,#6610f2);
+      color:white;
+      padding:56px 0;
+      text-align:center;
+      border-bottom:6px solid rgba(255,255,255,0.08);
+    }
+    header h1 { font-size:2.6rem; letter-spacing:1px; margin-bottom:8px; }
+    header p { opacity:0.95; }
+
+    /* Sections base */
+    section { padding:56px 0; }
+    h2 {
+      font-size:1.9rem; color:#007bff; margin-bottom:18px; text-align:center;
+    }
+
+    /* ABOUT */
+    .about-wrap {
+      display:flex; gap:28px; align-items:center; justify-content:center; flex-wrap:wrap;
+    }
+    .about-photo {
+      width:160px; height:160px; border-radius:50%;
+      overflow:hidden; border:5px solid #007bff; flex:0 0 160px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      animation:float 4s ease-in-out infinite;
+    }
+    .about-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+    .about-text { max-width:700px; text-align:left; }
+
+    /* Skills */
+    .skills-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:16px;
+      margin-top:18px;
+    }
+    .skill {
+      background:white; padding:14px; border-radius:12px; font-weight:600;
+      box-shadow:0 6px 18px rgba(20,20,20,0.06); text-align:center;
+      transition:transform .25s ease, background .25s ease, color .25s ease;
+    }
+    .skill:hover { transform:translateY(-6px); background:#007bff; color:white; }
+
+    /* Projects */
+    .project-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px;
+    }
+    .project {
+      background:white; border-radius:14px; overflow:hidden;
+      box-shadow:0 10px 26px rgba(10,10,10,0.06); transition:transform .28s ease, box-shadow .28s ease;
+    }
+    .project img { width:100%; display:block; height:170px; object-fit:cover; }
+    .project .p-body { padding:14px; text-align:left; }
+    .project h3 { margin-bottom:8px; font-size:1.1rem; color:#111; }
+    .project p { font-size:0.95rem; color:#444; }
+    .project:hover { transform:translateY(-10px); box-shadow:0 18px 48px rgba(10,10,10,0.12); }
+
+    /* Resume button */
+    .center { text-align:center; }
+    .btn {
+      display:inline-block; margin-top:12px; padding:12px 18px; border-radius:10px;
+      background:linear-gradient(90deg,#007bff,#6610f2); color:white; font-weight:700;
+      box-shadow:0 8px 20px rgba(102,16,242,0.12); transition:transform .18s ease;
+    }
+    .btn:hover { transform:translateY(-4px); }
+
+    /* Contact */
+    .contact-details { text-align:center; font-size:1rem; color:#222; }
+    .contact-details a { color:#007bff; font-weight:600; }
+
+    /* Footer */
+    footer {
+      background:#111; color:#ddd; padding:18px 0; text-align:center; font-size:0.95rem;
+      margin-top:28px;
+    }
+
+    /* Small screens */
+    @media (max-width:720px) {
+      header h1 { font-size:2rem; }
+      .about-text { text-align:center; }
+    }
+
+    /* Animations */
+    @keyframes float { 0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)} }
+  </style>
+</head>
+<body>
+
+  <!-- ============== HEADER ============== -->
+  <header>
+    <div class="container">
+      <h1>Md Saquib</h1>
+      <p>Web Developer • Creative Designer • Problem Solver</p>
+    </div>
+  </header>
+
+  <!-- ============== ABOUT ============== -->
+  <section id="about">
+    <div class="container about-wrap">
+      <div class="about-photo" title="My Photo">
+        <!-- Replace myphoto.jpg with your own photo in the same folder -->
+        <img src="saquib.jpg" alt="My Photo">
+      </div>
+
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm <strong>Md Saquib</strong>. I build clean, responsive websites and small web apps using
+          HTML, CSS and JavaScript. I enjoy learning new tools and turning ideas into working projects.
+        </p>
+
+        <!-- quick skills inline -->
+        <div style="margin-top:12px;">
+          <strong>Key skills:</strong> HTML • CSS • JavaScript • Responsive Design • Python
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SKILLS ============== -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">HTML &amp; Semantics</div>
+        <div class="skill">CSS &amp; Flexbox/Grid</div>
+        <div class="skill">JavaScript (Vanilla)</div>
+        <div class="skill">Responsive Design</div>
+        <div class="skill">Version Control (Git)</div>
+        <div class="skill">Basic Python</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== PROJECTS ============== -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <div class="project-grid">
+        <!-- Project 1 -->
+        <div class="project">
+          <img src="project1.jpg" alt="Project 1">
+          <div class="p-body">
+            <h3>Portfolio Website</h3>
+            <p>A responsive personal portfolio built with HTML and CSS, showcasing projects and contact info.</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+          <img src="project2.jpg" alt="Project 2">
+          <div class="p-body">
+            <h3>Weather App</h3>
+            <p>A small JavaScript app that fetches weather info from an API and shows current conditions.</p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project">
+          <img src="project3.jpg" alt="Project 3">
+          <div class="p-body">
+            <h3>E-commerce Mini</h3>
+            <p>A mini e-commerce demo with product list and simple cart functionality (HTML/CSS/JS).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== RESUME ============== -->
+  <section id="resume">
+    <div class="container center">
+      <h2>Resume</h2>
+      <!-- Make sure resume.pdf exists in the same folder -->
+      <a class="btn" href="resume.pdf" download>Download Resume (PDF)</a>
+    </div>
+  </section>
+
+  <!-- ============== CONTACT ============== -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-details">
+        <p>Email: <a href="mailto:mdsaquib2722000@gmail.com">mdsaquib2722000@gmail.com</a></p>
+        <p>Phone: +91 9354990406</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer>
+    <div class="container">
+      © 2025 Md Saquib • Built with ❤️ • All rights reserved
+    </div>
+  </footer>
+
+</body>
+</html>
